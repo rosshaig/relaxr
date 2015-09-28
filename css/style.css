@@ -36,20 +36,25 @@ Developer @GA in LDN
 /*******************************************/
 
 body {
-  color: #000;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   font-family: 'Open Sans', sans-serif;
 }
 
+  body.landing {
+      color: #000;
+  }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
+  body.blog {
+    background-color: #f0efef;
+  }
 
 
+/******************************************/
+/* LAYOUT LANDING PAGE */
+/******************************************/
 
-header {
+.landing-header {
   height: 500px;
   margin: 0 auto 0 auto;
   padding: 40px 40px;
@@ -58,16 +63,197 @@ header {
 
 }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+/******************************************/
+/* LAYOUT BLOG PAGE */
+/******************************************/
+
+
+header.blog {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #033048;
+}
+
+nav.blog {
+  color: #f9e42e;
+  font-weight: 400;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+ul.blog {
+  float: right;
+}
+
+  ul.blog li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+  }
+
+h1.blog{
+  float: left;
+  color: white;
+  margin-left: 10px;
+  padding: 0px;
+  width: 20%;
+}
+
+main.blog-main {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* QUESTION
+Hello! The design brief asked for a 20px 'gutter' between the
+blog articles and sidebar. I've done this through 10px margins on each
+of the neighbouring containers - was this the best approach? */
+
+.blog-container {
+  float: left;
+  width: 700px;
+  padding: 10px;
+  margin-right: 10px;
+  clear: both;
+}
+
+  article.blog {
+    padding: 10px;
+    border-bottom: 1px solid #033048;
+    clear: both;
+  }
+
+section.sidebar {
+  float: left;
+  width: 240px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+/******************************************/
+/* STYLES BLOG PAGE */
+/******************************************/
+
+h2.blog {
+  text-align: left;
+  color: #033048;
+  padding-top: 10px;
+  font-size: 40px;
+  font-style: bold;
+}
+
+p.blog {
+  font-size: 24px;
+  font-weight: lighter;
+  color: ##606161;
+}
+
+  p.blog::first-letter {
+    text-transform: uppercase;
+    font-size: 55px;
+    float: left;
+    padding: 0px 5px 5px 2px;
+
+  }
+
+.blog-image-1 {
+  background: url(../images/blog_photo1.jpg) no-repeat;
+  width: 100%;
+  height: 240px;
+}
+
+.blog-image-2 {
+  background: url(../images/blog_photo2.jpg) no-repeat;
+  width: 100%;
+  height: 240px;
+}
+
+.read-more {
+  float: right;
+  text-decoration: none;
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  color:#033048;
+}
+    .read-more:hover {
+      color: #f9e42e;
+    }
+
+a.blog {
+    text-decoration: none;
+    color: #f9e42e;
+  }
+
+    a.blog:hover {
+      text-decoration: none;
+      color: #FFF;
+    }
+
+
+/******************************************/
+/* LAYOUT BLOG SIDEBARS */
+/******************************************/
+
+h3.sidebar {
+  font-size: 32px;
+  font-weight: bolder;
+  margin-top: 5px;
+}
+
+p.sidebar,
+ul.sidebar {
+  font-size: 24px;
+  font-weight: lighter;
+  color: #033048;
+}
+
+ul.sidebar li {
+  list-style: none;
+  padding-left: 10px;
+}
+
+  .categories-list {
+    text-decoration: none;
+    color: #033048;
+  }
+
+    .categories-list:hover {
+      color: #606161;
+    }
+
+.learn-more {
+  text-decoration: none;
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  color:#033048;
+}
+
+  .learn-more:hover {
+    color: #f9e42e;
+    }
+
+.ad-unit {
+  background-image: url(../images/ad-unit.png) ;
+  width: 240px;
+  height: 546px;
+  margin: 20px auto;
+}
+
+
+/******************************************/
+/* LANDING PAGE STYLES */
+/******************************************/
 
 h1 {
   color: white;
   font-weight: 800;
   font-size: 48px;
   margin-top: 0px;
-}
+  }
 
 h2 {
   color: white;
@@ -76,13 +262,13 @@ h2 {
   text-align: center;
   margin-top: 0px;
   padding-bottom: 20px;
-}
+  }
 
 h3 {
   font-weight: 600;
   font-size: 20px;
   color: #033048;
-}
+  }
 
 main {
   font-size: 14px;
@@ -92,18 +278,18 @@ main {
   background-color: #f0efef;
   padding: 20px 20px;
   color: #606161;
+  }
+
+.benefits-ul {
+  padding: 0 0 0 40px;
 }
 
-  main ul {
-    padding: 0 0 0 40px;
-  }
-
-  .benefits {
-    position: relative;
-    left: 20px;
-    width: 300px;
-    margin: 0 auto 10px 40px;
-  }
+.benefits {
+  position: relative;
+  left: 20px;
+  width: 300px;
+  margin: 0 auto 10px 40px;
+}
 
 figure {
   background: url('../images/testimonial_bg.jpg') rgb(134,141,157) ;
@@ -114,29 +300,29 @@ figure {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
+  }
+
+blockquote {
+  position: relative;
+  top: 10px;
+  width: 300px;
+  margin: 0 auto 0 auto;
+  font-weight: 300;
+  font-style: italic;
 }
 
-  blockquote {
-    position: relative;
-    top: 10px;
-    width: 300px;
-    margin: 0 auto 0 auto;
-    font-weight: 300;
-    font-style: italic;
-  }
-
-    figure p {
-    position: relative;
-    top: 10px;
-    width: 300px;
-    margin: 0 auto 0 auto;
-    font-weight: 600;
-  }
+figure p {
+  position: relative;
+  top: 10px;
+  width: 300px;
+  margin: 0 auto 0 auto;
+  font-weight: 600;
+}
 
 .sign-up {
-    background: #f9e42e;
-    color: #FFF;
-    padding: 40px;
+  background: #f9e42e;
+  color: #FFF;
+  padding: 40px;
 }
 
 
@@ -148,62 +334,75 @@ footer {
   padding-bottom: 20px;
   font-size: 9px;
   font-weight: 600;
+  }
+
+#footer-title {
+  color: #f9e42e;
 }
 
-  #footer-title {
-    color: #f9e42e;
+.nav-landing {
+  width: 100px;
+  margin: 20px auto;
+}
+
+  .nav-landing-ul li {
+   list-style: none;
+   text-decoration: none;
+   display: block-inline;
+   padding: 0 0 0 -40;
+   }
+
+/******************************************/
+/* SOCIAL ICONS */
+/******************************************/
+
+.alignright {
+   float: right;
+   padding: 0px 5px 10px 5px;
+ /* padding: 0px 5px 10px 5px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+ float: left;
+ padding: 0 5px 10px 5px;
+ /*padding: 0 5px 10px 5px; /* note the padding around a left floated image */
+}
+
+/******************************************/
+/* BUTTONS */
+/******************************************/
+
+.get-it {
+ display: block;
+ font-weight: 800;
+ font-size: 14px;
+ background-color: #f9e42e;
+ border-radius: 5px;
+ width: 120px;
+ text-align: center;
+ margin: 0 auto 0 auto;
+ padding: 10px;
+
+}
+
+  a.get-it {
+   text-decoration: none;
+   color: #000;
   }
 
-  nav {
-    width: 100px;
-    margin: 20px auto;
+.sign-up-button {
+ display: block;
+ font-weight: 800;
+ font-size: 14px;
+ background-color: #033048;
+ border-radius: 5px;
+ width: 120px;
+ text-align: center;
+ margin: 0 auto 0 auto;
+ padding: 10px;
+}
+
+  a.sign-up-button {
+    text-decoration: none;
+    color: #FFF;
   }
-
-    nav ul li {
-     list-style: none;
-     text-decoration: none;
-     display: block-inline;
-     padding: 0 0 0 -40;
-     }
-
- /******** SOCIAL ICONS **********/
-
- .alignright {
-     float: right;
-     padding: 0px 5px 10px 5px;
-   /* padding: 0px 5px 10px 5px; /* note the padding around a right floated image */
- }
-
- .alignleft {
-   float: left;
-   padding: 0 5px 10px 5px;
-   /*padding: 0 5px 10px 5px; /* note the padding around a left floated image */
- }
-
- /******* BUTTONS ***************/
-
- .get-it {
-   display: block;
-   font-weight: 800;
-   font-size: 14px;
-   background-color: #f9e42e;
-   border-radius: 5px;
-   width: 120px;
-   text-align: center;
-   margin: 0 auto 0 auto;
-   padding: 10px;
-
- }
-
- .sign-up-button {
-   display: block;
-   font-weight: 800;
-   font-size: 14px;
-   background-color: #033048;
-   border-radius: 5px;
-   width: 120px;
-   text-align: center;
-   margin: 0 auto 0 auto;
-   padding: 10px;
-
- }
